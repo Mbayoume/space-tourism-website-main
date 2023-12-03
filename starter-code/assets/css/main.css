@@ -1,0 +1,244 @@
+@import "design.css";
+
+
+
+
+
+/* i wiil the main utility classes here */
+.txt-dark{color: var(--clr-dark);}
+.txt-accent{color: var(--clr-light);}
+.txt-white{color: var(--clr-white);}
+
+.bg-dark{background-color: var(--clr-dark);}
+.bg-accent{background-color: var(--clr-light);}
+.bg-white{background-color: var(--clr-white);}
+
+/* typography */
+
+
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+
+
+@media (min-width: 35em) {
+  :root {
+      --fs-900: 9.375rem;
+      --fs-800: 5rem;
+      --fs-700: 2.5rem;
+      --fs-600: 1.5rem;
+      --fs-400: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+      /* font-sizes */
+      --fs-800: 6.25rem;
+      --fs-700: 3.5rem;
+      --fs-600: 2rem;
+      --fs-400: 1.125rem;
+  }
+}
+
+
+header{
+  /* outline:1px solid green; */
+  
+}
+
+.navigation__container{
+
+    display: flex;
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+    gap: var(--gap);
+    justify-content: space-between;
+    align-items: center;
+    transition: 500ms ease-in-out;
+   }
+
+  
+.logo{
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+
+}
+  
+  .BG_body{
+    background-image: url(../home/background-home-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  .container{
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2fr);
+  }
+
+  #content{
+    display: grid;
+    gap: 2rem;
+    min-height: 100vh;
+    grid-template-columns: repeat(2,1fr);
+
+  }
+
+  .explore__button__home,
+  .typography{
+display: grid;
+place-content: center;
+/* outline: 1px solid red; */
+  }
+  .typography h1{
+    display: inline-grid;
+  }
+
+
+  
+/* responsive design */
+
+.menu_icon{
+  display: none;
+
+}
+
+
+.side__menu{
+  display: none;
+}
+
+
+/* mobile phone size */
+@media only screen and (max-width:567px){
+
+
+  /* this styling will disabled to make the sidemenu active in the mobile view */
+  /* .navigation__container ul{
+    display: none;
+    background-color: none;
+  } */
+
+  .primary-navigation{
+    gap: 1.3rem;
+    list-style: none;
+    align-items: start;
+    justify-content:flex-start ;
+    flex-direction: column;
+    padding: min(10rem, 20vh) 2rem;
+    margin: 0;
+    /* a modern css property to postiton the items  */
+    inset:  0 0 0 25%;
+    position: fixed;
+    background-color:  hsla(0, 0%, 4%, 0.29);
+    backdrop-filter: blur(15px);
+    z-index: 999;
+    transform: translateX(100%);
+    /* transition: transform 500ms ease-in-out; */
+
+  }
+  .toggle{
+    transition: 500ms ease-in-out !important;
+  }
+
+
+  /* remove the underline in the mobile size */
+  .underline-indicators > *{
+    padding: 0;
+    border-bottom: none;
+   
+   }
+
+
+   
+
+#content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  /* outline: solid 2px red; */
+  
+  text-align: center;
+}
+
+#content p{
+font-size: 1.5rem;
+}
+.menu_icon{
+  display: inline-block;
+  position: absolute;
+  /* top:1rem; */
+  right: 2rem;
+  z-index: 2000;
+  background: transparent;
+  
+}
+
+.BG_mobile{
+  background-image: url(../home/background-home-mobile.jpg);
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.large-button{
+  padding: 0 .9em;
+}
+  }
+
+
+  /* the tablet size */
+  @media only screen and (max-width:768px){
+
+    
+    .navigation__container{
+      display: flex;
+      /* margin: 1.2rem; */
+      gap: 1.2rem;
+      /* justify-content: space-between; */
+      align-items: center;
+      font-size: var(--fs-200);
+     }
+    
+   
+    .BG_mobile{
+      background-image: url(../home/background-home-tablet.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+  }

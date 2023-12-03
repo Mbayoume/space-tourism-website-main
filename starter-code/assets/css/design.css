@@ -204,7 +204,7 @@ select {
   .large-button{
     display: grid;
     position: relative;
-    padding:0 2em;
+    padding:0 1.2em;
     aspect-ratio: 1/1;
     place-items: center;
     border-radius: 50%;
@@ -234,18 +234,34 @@ select {
   
   }
 
-  nav{
+  .design_nav{
     background: rgba(91, 91, 91, 0.3); /* Use rgba to specify the color with opacity */
   }
+
   .primary-navigation{
     --gap:4rem;
     text-align: center;
     list-style: none;
     align-items: center;
-    justify-content: center;
+    justify-content:space-evenly ;
+    display: flex;
     padding: 0;
     margin: 0;
+    background-color:  hsla(0, 0%, 0%, 0.29);
+    backdrop-filter: blur(15px);
+  
+
+    /* a modern css property to postiton the items  */
+    /* inset:  0 0 0 25%; */
+    /* position: fixed; */
+   /* background-color:  hsla(0, 0%, 0%, 0.29); */
+  /* here is how to make a blur backgroudn */
+   /* backdrop-filter: blur(15px); */
+    /* z-index: 999; */
   }
+
+
+
 
   .primary-navigation  a{
     text-decoration: none;
@@ -315,3 +331,11 @@ select {
   border: .2rem solid hsl(0, 0%, 100%);
   color: hsl(0, 0%, 100%);
 }
+
+
+ /* //////////////////////////////
+the home page
+ /////////////////// */
+
+ /* navigation bar */
+
