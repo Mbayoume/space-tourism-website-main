@@ -18,18 +18,27 @@
 
   <!-- <div class="container"> -->
 
-    <header class="flex">
+    <header class="primary-header flex">
+      <div ><img class="logo" src="/starter-code/assets/shared/logo.svg" alt=""></div>
 
+      <!-- create the button -->
+      <!-- in this button :
+        - aria expanded is added to make the menu closed as the default 
+        - aria contorles : which wil make the button programiticly controles the navigation 
+        -
+      
+      -->
+
+      <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+      </button>
       <nav>
-        <div ><img class="logo" src="/starter-code/assets/shared/logo.svg" alt=""></div> 
-        
-        <ul id="home__primary__navigation" class=" primary-navigation flex underline-indicators  ff-serif ">
-            <li class="active"><a class="uppercase txt-white  letter-spacing-2" href="#"><span>01</span>Home</a></li>
-            <li><a class="uppercase txt-white ff-sans-cond letter-spacing-2" href="#"><span>02</span>Destination</a></li>
-            <li><a class="uppercase txt-white ff-sans-cond letter-spacing-2" href="#"><span>03</span>Crew</a></li>
-            <li><a class="uppercase txt-white ff-sans-cond letter-spacing-2" href="#"><span>04</span>Technology</a></li>
+        <ul data-visibility="false" id="home__primary__navigation" class=" primary-navigation flex underline-indicators  ff-serif ">
+            <li><a class="uppercase txt-white ff-sans-cond letter-spacing-2" href="#"><span aria-hidden="true">01</span>Home</a></li>
+            <li><a class="uppercase txt-white ff-sans-cond letter-spacing-2" href="#"><span aria-hidden="true">02</span>Destination</a></li>
+            <li><a class="uppercase txt-white ff-sans-cond letter-spacing-2" href="#"><span aria-hidden="true">03</span>Crew</a></li>
+            <li><a class="uppercase txt-white ff-sans-cond letter-spacing-2" href="#"><span aria-hidden="true">04</span>Technology</a></li>
         </ul>
-        <svg class="menu_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
     </nav>
 
 

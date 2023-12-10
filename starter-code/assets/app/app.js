@@ -1,12 +1,16 @@
 // selec the contoroling items
 
-const hum__menu = document.querySelector(".menu_icon");
-const navigation__menu = document.querySelector(".primary-navigation");
+const mobile__toggle = document.querySelector(".mobile-nav-toggle");
+const primary__navigation = document.querySelector(".primary-navigation");
 
-hum__menu.addEventListener("click", () => {
-  navigation__menu.classList.toggle("primary-navigation");
-  if (navigation__menu.classList.contains("primary-navigation")) {
+mobile__toggle.addEventListener("click", () => {
+  const is__visible = primary__navigation.getAttribute("data-visibility");
+
+  if (is__visible === "false") {
+    primary__navigation.setAttribute("data-visibility", true);
+    mobile__toggle.setAttribute("aria-expanded", true);
   } else {
-    navigation__menu.style.display = "none";
+    primary__navigation.setAttribute("data-visibility", false);
+    mobile__toggle.setAttribute("aria-expanded", false);
   }
 });
